@@ -1,0 +1,166 @@
+$primary: #800080;
+$navbar-color: $primary;
+// $body-bg: #fffdfd;
+$body-bg: #ffffff00;
+$navbar-color: red;
+// $body-color: $info;
+// $gradient: linear-gradient(to right, #FF864C 0%, #800080 80%);
+$gradient: linear-gradient(270deg, #800080 0%, #FF864C 100%);
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+// @import '../node_modules/bootstrap/scss/';
+.nav-height {
+    height: 4rem;
+}
+
+.logo {
+    width: 10rem;
+    height: 4rem;
+}
+
+// ReferAndEarn
+.withdrawBox {
+    width: 32rem;
+    height: 11rem;
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+    .withdraw-btn {
+        border-radius: 1.5rem;
+    }
+}
+
+.refCode {
+
+    width: 20rem;
+    height: 2.9rem;
+    background: $gradient;
+    border: 0;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 2rem;
+        letter-spacing: 1.2rem;
+        color: $primary;
+    }
+}
+
+.refCode::before {
+    content: '';
+    display: block;
+    height: calc(100% - calc(1.5px *2));
+    width: calc(100% - calc(1.5px *2));
+    background: white;
+    position: absolute;
+    top: 1.5px;
+    left: 1.5px;
+    border-radius: calc(8px - 1.5px);
+    z-index: -1;
+}
+
+.icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 12px 10px;
+    background-color: rgba($color: #D9D9D9, $alpha: 2.5);
+}
+
+.info {
+    div {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.4rem;
+    }
+
+    .desc {
+        width: 16rem;
+        color: #4D4D4D;
+        font-size: .9rem;
+        font-style: normal;
+        font-weight: 400;
+        // margin-top: -4px;
+        line-height: 1.4rem;
+    }
+}
+
+// FriendsReferred
+.fw {
+    font-size: 1.2rem;
+}
+
+.friendsReferred {
+    margin-left: 0;
+}
+
+.code {
+    width: 11.5rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+    letter-spacing: .8rem;
+    padding-top: .8rem;
+}
+
+.balance {
+    width: 10rem;
+    height: 5.5rem;
+    border-radius: 1.3rem;
+}
+
+.friends {
+    background: $gradient;
+    color: #fff;
+    width: 22rem;
+    height: 14.5rem;
+    border-radius: 1.1rem;
+
+    .courses {
+        line-height: 1.2rem;
+        border: 1px solid #fff;
+        padding: 6px 10px;
+        border-radius: 1.1rem;
+        font-size: .9rem;
+        font-weight: normal;
+    }
+}
+
+
+
+
+
+
+@media(max-width:450px) {
+    .withdrawBox {
+        width: 23.5rem;
+        margin-left: .6rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .refCode {
+        width: 24rem;
+    }
+
+    .fw {
+        font-size: 1rem;
+    }
+
+    .code {
+        margin-top: -.8rem;
+    }
+
+    .friendsReferred {
+        margin-left: 1.2rem;
+    }
+}
